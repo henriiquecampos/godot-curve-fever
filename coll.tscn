@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="LineShape2D" id=1]
+
+custom_solver_bias = 0.0
+normal = Vector2( 0, -1 )
+d = 0.0
+
+[node name="coll" type="CollisionShape2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = -1
+
+

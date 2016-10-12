@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://playerEntityNew.gd" type="Script" id=1]
+[ext_resource path="res://headTail.png" type="Texture" id=2]
+
+[node name="playerEntity" type="Node2D"]
+
+script/script = ExtResource( 1 )
+threshold = 0
+left = null
+right = null
+color = null
+
+[node name="head" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, -64 )
+texture = ExtResource( 2 )
+
+[node name="tail" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+

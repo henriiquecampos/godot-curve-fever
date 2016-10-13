@@ -7,8 +7,8 @@
 [node name="playerEntity" parent="." instance=ExtResource( 1 )]
 
 editor/display_folded = true
-transform/pos = Vector2( 675.073, 481.556 )
-threshold = 240
+transform/pos = Vector2( 812, 500 )
+threshold = 50
 left = "player1_left"
 right = "player1_right"
 color = Color( 0.289734, 0.494686, 0.734375, 1 )
@@ -24,19 +24,19 @@ modulate = Color( 0.286275, 0.494118, 0.733333, 1 )
 [node name="playerEntity1" parent="." instance=ExtResource( 1 )]
 
 editor/display_folded = true
-transform/pos = Vector2( 370.452, 474.003 )
-threshold = 240
+transform/pos = Vector2( 212, 500 )
+threshold = 50
 left = "player2_left"
 right = "player2_right"
-color = Color( 0.755966, 0.431641, 0.8125, 1 )
+color = Color( 0.734375, 0.289734, 0.727427, 1 )
 
 [node name="head" parent="playerEntity1"]
 
-modulate = Color( 0.752941, 0.431373, 0.811765, 1 )
+modulate = Color( 0.769592, 0.365509, 0.792969, 1 )
 
 [node name="tail" parent="playerEntity1"]
 
-modulate = Color( 0.752941, 0.431373, 0.811765, 1 )
+modulate = Color( 0.768627, 0.364706, 0.792157, 1 )
 
 
 [editable path="playerEntity"]

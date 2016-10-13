@@ -24,20 +24,19 @@ func _fixed_process(delta):
 	elif Input.is_action_pressed(left):
 		head.rotate(3 * delta)
 	if head.get_pos().distance_to(points[points.size() -1]) > 10:
-		for child in get_children():
-			if child extends CollisionShape2D:
-				self.remove_child(child)
 		update()
 func _draw():
-	var c
-	var line
+	var last
+	var current
 
 	for i in range(0,points.size() -1):
+		last = points[i]
+		current = points[i + 1]
 		draw_line(points[i], points[i + 1], color, 10)
-		c = coll.instance()
-		line = SegmentShape2D.new()
-		line.set_a(points[i])
-		line.set_b(points[i + 1])
-		self.add_child(c)
-		c.set_shape(line)
+	var c = coll.instance()
+	var line = SegmentShape2D.new()
+	line.set_a(last)
+	line.set_b(current)
+	self.add_child(c)
+	c.set_shape(line)
 	points.append(head.get_pos())
